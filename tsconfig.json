@@ -1,0 +1,21 @@
+{
+  "ts-node": {
+    "files": true
+  },
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ES2023", "DOM"],
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "strict": false,
+    "strictNullChecks": true,
+    "types": ["codeceptjs", "node"],
+    "declaration": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./"
+  },
+  "include": ["./**/*.ts"],
+  "exclude": ["node_modules"]
+}
