@@ -11,5 +11,5 @@ interface InputForm {
     firstOptionLanguage: string
     timezone: string
     firstOptionZone: string
-    super: {role: string, name: string }
+    super: string
 }

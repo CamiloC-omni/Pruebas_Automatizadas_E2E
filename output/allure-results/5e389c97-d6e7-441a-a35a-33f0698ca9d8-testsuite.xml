@@ -1,0 +1,231 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1726243058190' stop='1726243077380'>
+    <name>Crear un nuevo usuario</name>
+    <title>Crear un nuevo usuario</title>
+    <test-cases>
+        <test-case start='1726243058589' status='failed' stop='1726243077068'>
+            <name>Scenario Outline para crear un nuevo usuario {"UserNameAdmin":"admin","UserPasswordAdmin":"2600Admin$uper99","Tenant":"SUPER99","UserNames":"Prueba Test","UserLoginName":"TestUser1","UserEmail":"test1Auto@example.com","UserEmailConfirm":"test1Auto@example.com","UserPassword":"Test1?1234","UserConfirmPassword":"Test1?1234","UserCountry":"Panama","Language":"Español","Timezone":"Panama"} @probandoCrearUser</name>
+            <title>Scenario Outline para crear un nuevo usuario {"UserNameAdmin":"admin","UserPasswordAdmin":"2600Admin$uper99","Tenant":"SUPER99","UserNames":"Prueba Test","UserLoginName":"TestUser1","UserEmail":"test1Auto@example.com","UserEmailConfirm":"test1Auto@example.com","UserPassword":"Test1?1234","UserConfirmPassword":"Test1?1234","UserCountry":"Panama","Language":"Español","Timezone":"Panama"} @probandoCrearUser</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@probandoCrearUser'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1726243059035' status='passed' stop='1726243067472'>
+                    <name>Given Inicio sesion en la pagina con las credenciales de admin admin, 2600Admin$uper99,SUPER99 ""</name>
+                    <title>Given Inicio sesion en la pagina con las credenciales de admin admin, 2600Admin$uper99,SUPER99 ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1726243059035' status='passed' stop='1726243060672'>
+                            <name>I am on page "/login"</name>
+                            <title>I am on page "/login"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243060672' status='passed' stop='1726243060924'>
+                            <name>I wait for element "span.text-3xl.font-bold", 4</name>
+                            <title>I wait for element "span.text-3xl.font-bold", 4</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243060924' status='passed' stop='1726243060929'>
+                            <name>I see in current url "/login"</name>
+                            <title>I see in current url "/login"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243060929' status='passed' stop='1726243060941'>
+                            <name>I wait for element "input#email", 5</name>
+                            <title>I wait for element "input#email", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243060941' status='passed' stop='1726243061300'>
+                            <name>I fill field "input#email", "admin"</name>
+                            <title>I fill field "input#email", "admin"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243061300' status='passed' stop='1726243061308'>
+                            <name>I wait for element "input#password", 5</name>
+                            <title>I wait for element "input#password", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243061308' status='passed' stop='1726243061811'>
+                            <name>I fill field "input#password", "2600Admin$uper99"</name>
+                            <title>I fill field "input#password", "2600Admin$uper99"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243061812' status='passed' stop='1726243062193'>
+                            <name>I fill field "//input[@placeholder="Tenant"]", "SUPER99"</name>
+                            <title>I fill field "//input[@placeholder="Tenant"]", "SUPER99"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243062193' status='passed' stop='1726243062438'>
+                            <name>I click "button[type="button"]"</name>
+                            <title>I click "button[type="button"]"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243062439' status='passed' stop='1726243067448'>
+                            <name>I wait 5</name>
+                            <title>I wait 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243067449' status='passed' stop='1726243067471'>
+                            <name>I wait for element "//div[text()="Bienvenido Admin Super99"]", 3</name>
+                            <title>I wait for element "//div[text()="Bienvenido Admin Super99"]", 3</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1726243067472' status='passed' stop='1726243067493'>
+                    <name>When Verifico que la pagina haya cargado y me encuentre en pagina de Landing ""</name>
+                    <title>When Verifico que la pagina haya cargado y me encuentre en pagina de Landing ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1726243067472' status='passed' stop='1726243067480'>
+                            <name>I see in current url "/landing"</name>
+                            <title>I see in current url "/landing"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243067481' status='passed' stop='1726243067493'>
+                            <name>I wait for element "//a[text()="Torre de control"]", 3</name>
+                            <title>I wait for element "//a[text()="Torre de control"]", 3</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1726243067493' status='passed' stop='1726243073769'>
+                    <name>And Presiono el boton de configuracion, busco y presiono usuario, me envia a la pagina de usuarios y presiono el boton Crear ""</name>
+                    <title>And Presiono el boton de configuracion, busco y presiono usuario, me envia a la pagina de usuarios y presiono el boton Crear ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1726243067493' status='passed' stop='1726243067654'>
+                            <name>I click "//*[@id="__nuxt"]/div/main/div[1]/div[2]/ul[2]/li[4]/a"</name>
+                            <title>I click "//*[@id="__nuxt"]/div/main/div[1]/div[2]/ul[2]/li[4]/a"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243067655' status='passed' stop='1726243068143'>
+                            <name>I click "//a[@href="/users"]"</name>
+                            <title>I click "//a[@href="/users"]"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243068143' status='passed' stop='1726243068195'>
+                            <name>I see in current url "/users"</name>
+                            <title>I see in current url "/users"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243068195' status='passed' stop='1726243073207'>
+                            <name>I wait 5</name>
+                            <title>I wait 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243073208' status='passed' stop='1726243073218'>
+                            <name>I wait for element "//a[@type="button"]", 2</name>
+                            <title>I wait for element "//a[@type="button"]", 2</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243073218' status='passed' stop='1726243073441'>
+                            <name>I click "//a[@type="button"]"</name>
+                            <title>I click "//a[@type="button"]"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243073441' status='passed' stop='1726243073671'>
+                            <name>I wait in url "/users/create?tab=userNew", 5</name>
+                            <title>I wait in url "/users/create?tab=userNew", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243073671' status='passed' stop='1726243073767'>
+                            <name>I wait for element "//form[@class="dynamic-form grid md:grid-cols-2 md:gap-4"]"</name>
+                            <title>I wait for element "//form[@class="dynamic-form grid md:grid-cols-2 md:gap-4"]"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1726243073769' status='failed' stop='1726243077068'>
+                    <name>And Lleno los campos con Prueba Test, TestUser1, test1Auto@example.com, test1Auto@example.com, Test1?1234, Test1?1234, Panama, Español, Panama y presiono Guardar ""</name>
+                    <title>And Lleno los campos con Prueba Test, TestUser1, test1Auto@example.com, test1Auto@example.com, Test1?1234, Test1?1234, Panama, Español, Panama y presiono Guardar ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1726243073769' status='passed' stop='1726243074223'>
+                            <name>I fill field "//label[text()="Nombres"]", "Prueba Test"</name>
+                            <title>I fill field "//label[text()="Nombres"]", "Prueba Test"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243074223' status='passed' stop='1726243074574'>
+                            <name>I fill field "//label[text()="Nombre de usuario"]", "TestUser1"</name>
+                            <title>I fill field "//label[text()="Nombre de usuario"]", "TestUser1"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243074574' status='passed' stop='1726243075169'>
+                            <name>I fill field "//label[text()="Correo electrónico"]", "test1Auto@example.com"</name>
+                            <title>I fill field "//label[text()="Correo electrónico"]", "test1Auto@example.com"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243075170' status='passed' stop='1726243075785'>
+                            <name>I fill field "//label[text()="Confirmación de correo electrónico"]", "test1Auto@example.com"</name>
+                            <title>I fill field "//label[text()="Confirmación de correo electrónico"]", "test1Auto@example.com"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243075786' status='passed' stop='1726243076238'>
+                            <name>I fill field "//label[text()="Contraseña"]", "Test1?1234"</name>
+                            <title>I fill field "//label[text()="Contraseña"]", "Test1?1234"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243076239' status='passed' stop='1726243076653'>
+                            <name>I fill field "Confirmación de contraseña", "Test1?1234"</name>
+                            <title>I fill field "Confirmación de contraseña", "Test1?1234"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243076653' status='passed' stop='1726243077056'>
+                            <name>I fill field "//div[@label="País"]/button/div[2]/input", "Panama"</name>
+                            <title>I fill field "//div[@label="País"]/button/div[2]/input", "Panama"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243077056' status='failed' stop='1726243077061'>
+                            <name>I click "//div[@label="País"]/button/ul/li[1]"</name>
+                            <title>I click "//div[@label="País"]/button/ul/li[1]"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Main session - Last Seen Screenshot' source='97d8167e-7050-4bf4-a8c4-d91c500bd760-attachment.png' type='image/png' size='69992'/>
+            </attachments>
+            <failure>
+                <message>Clickable element "//div[@label="País"]/button/ul/li[1]" was not found by text|CSS|XPath</message>
+                <stack-trace>Error: Clickable element "//div[@label="País"]/button/ul/li[1]" was not found by text|CSS|XPath
+                    at new ElementNotFound (C:\Users\CamiloCardenas\Documents\PLAYWRIGTH\PLAYWRIGHT-TESTING-BDD\node_modules\codeceptjs\lib\helper\errors\ElementNotFound.js:15:11)
+                    at assertElementExists (C:\Users\CamiloCardenas\Documents\PLAYWRIGTH\PLAYWRIGHT-TESTING-BDD\node_modules\codeceptjs\lib\helper\Playwright.js:3742:11)
+                    at Playwright.proceedClick (C:\Users\CamiloCardenas\Documents\PLAYWRIGTH\PLAYWRIGHT-TESTING-BDD\node_modules\codeceptjs\lib\helper\Playwright.js:3501:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

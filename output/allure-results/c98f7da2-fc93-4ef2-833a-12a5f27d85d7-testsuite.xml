@@ -1,0 +1,143 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1726243290044' stop='1726243300624'>
+    <name>Crear un nuevo usuario</name>
+    <title>Crear un nuevo usuario</title>
+    <test-cases>
+        <test-case start='1726243290445' status='failed' stop='1726243300356'>
+            <name>Scenario Outline para crear un nuevo usuario {"UserNameAdmin":"admin","UserPasswordAdmin":"2600Admin$uper99","Tenant":"SUPER99","UserNames":"Prueba Test","UserLoginName":"TestUser1","UserEmail":"test1Auto@example.com","UserEmailConfirm":"test1Auto@example.com","UserPassword":"Test1?1234","UserConfirmPassword":"Test1?1234","UserCountry":"Panama","Language":"Español","Timezone":"Panama"} @probandoCrearUser</name>
+            <title>Scenario Outline para crear un nuevo usuario {"UserNameAdmin":"admin","UserPasswordAdmin":"2600Admin$uper99","Tenant":"SUPER99","UserNames":"Prueba Test","UserLoginName":"TestUser1","UserEmail":"test1Auto@example.com","UserEmailConfirm":"test1Auto@example.com","UserPassword":"Test1?1234","UserConfirmPassword":"Test1?1234","UserCountry":"Panama","Language":"Español","Timezone":"Panama"} @probandoCrearUser</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@probandoCrearUser'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1726243290927' status='passed' stop='1726243299736'>
+                    <name>Given Inicio sesion en la pagina con las credenciales de admin admin, 2600Admin$uper99,SUPER99 ""</name>
+                    <title>Given Inicio sesion en la pagina con las credenciales de admin admin, 2600Admin$uper99,SUPER99 ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1726243290927' status='passed' stop='1726243292802'>
+                            <name>I am on page "/login"</name>
+                            <title>I am on page "/login"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243292802' status='passed' stop='1726243293155'>
+                            <name>I wait for element "span.text-3xl.font-bold", 4</name>
+                            <title>I wait for element "span.text-3xl.font-bold", 4</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243293156' status='passed' stop='1726243293161'>
+                            <name>I see in current url "/login"</name>
+                            <title>I see in current url "/login"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243293161' status='passed' stop='1726243293172'>
+                            <name>I wait for element "input#email", 5</name>
+                            <title>I wait for element "input#email", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243293173' status='passed' stop='1726243293578'>
+                            <name>I fill field "input#email", "admin"</name>
+                            <title>I fill field "input#email", "admin"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243293578' status='passed' stop='1726243293587'>
+                            <name>I wait for element "input#password", 5</name>
+                            <title>I wait for element "input#password", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243293587' status='passed' stop='1726243294143'>
+                            <name>I fill field "input#password", "2600Admin$uper99"</name>
+                            <title>I fill field "input#password", "2600Admin$uper99"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243294143' status='passed' stop='1726243294479'>
+                            <name>I fill field "//input[@placeholder="Tenant"]", "SUPER99"</name>
+                            <title>I fill field "//input[@placeholder="Tenant"]", "SUPER99"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243294479' status='passed' stop='1726243294697'>
+                            <name>I click "button[type="button"]"</name>
+                            <title>I click "button[type="button"]"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243294697' status='passed' stop='1726243299711'>
+                            <name>I wait 5</name>
+                            <title>I wait 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243299712' status='passed' stop='1726243299734'>
+                            <name>I wait for element "//div[text()="Bienvenido Admin Super99"]", 3</name>
+                            <title>I wait for element "//div[text()="Bienvenido Admin Super99"]", 3</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1726243299736' status='passed' stop='1726243299759'>
+                    <name>When Verifico que la pagina haya cargado y me encuentre en pagina de Landing ""</name>
+                    <title>When Verifico que la pagina haya cargado y me encuentre en pagina de Landing ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1726243299736' status='passed' stop='1726243299745'>
+                            <name>I see in current url "/landing"</name>
+                            <title>I see in current url "/landing"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243299746' status='passed' stop='1726243299759'>
+                            <name>I wait for element "//a[text()="Torre de control"]", 3</name>
+                            <title>I wait for element "//a[text()="Torre de control"]", 3</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1726243299759' status='failed' stop='1726243300355'>
+                    <name>And Presiono el boton de configuracion, busco y presiono usuario, me envia a la pagina de usuarios y presiono el boton Crear ""</name>
+                    <title>And Presiono el boton de configuracion, busco y presiono usuario, me envia a la pagina de usuarios y presiono el boton Crear ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1726243299759' status='passed' stop='1726243299936'>
+                            <name>I click "//*[@id="__nuxt"]/div/main/div[1]/div[2]/ul[2]/li[4]/a"</name>
+                            <title>I click "//*[@id="__nuxt"]/div/main/div[1]/div[2]/ul[2]/li[4]/a"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243299936' status='passed' stop='1726243300337'>
+                            <name>I click "//a[@href="/users"]"</name>
+                            <title>I click "//a[@href="/users"]"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726243300338' status='failed' stop='1726243300343'>
+                            <name>I see in current url "/users"</name>
+                            <title>I see in current url "/users"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Main session - Last Seen Screenshot' source='600cfd3a-95e1-4c6f-ae84-501a963a9ca2-attachment.png' type='image/png' size='44905'/>
+            </attachments>
+            <failure>
+                <message></message>
+                <stack-trace>undefined</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

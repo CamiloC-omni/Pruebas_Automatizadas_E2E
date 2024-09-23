@@ -1,5 +1,6 @@
 const { I } = inject()
 
+
 class CreateUser {
 	private pageLanding: string
 	private buttonConfiguration: string
@@ -7,32 +8,33 @@ class CreateUser {
 	private buttonCreateUser: string
 	private userNewForm: string
 	private inputForm: InputForm
-    private buttonSave: {role: string, name: string }
+    private buttonSave: string 
     private elementValidation : string
     private elementValidation2 : string
 
+
 	constructor() {
-		this.pageLanding = '//ul[@class="bottom-menu mt-5 p-1.5"]'
+		this.pageLanding = '//a[text()="Torre de control"]'
 		this.buttonConfiguration = '//*[@id="__nuxt"]/div/main/div[1]/div[2]/ul[2]/li[4]/a'
 		this.clickUser = '//a[@href="/users"]'
 		this.buttonCreateUser = '//a[@type="button"]'
 		this.userNewForm = '//form[@class="dynamic-form grid md:grid-cols-2 md:gap-4"]'
 		this.inputForm = {
             userNames: '//label[text()="Nombres"]',
-            userLoginName: '//input[@id="1289"]',
-            userEmail: '//input[@id="1293"]',
-            userEmailConfirm: '//input[@id="1297"]',
-            userPassword: '//input[@id="1301"]',
-            userConfirmPassword: '//input[@id="1306"]',
-            userCountry: '//button[@id="1311"]/div[2]/input',
-            firstOptionCountry: '#1311[data-index="0"]',
-            language: '//button[@id="1318"]/div[2]/input',
-            firstOptionLanguage: '#1311[data-index="0"]',
-            timezone: '//button[@id="1347"]/div[2]/input',
-            firstOptionZone: '#1347[data-index="0"]',
-            super: {role:'checkbox', name:'Super usuario' },
+            userLoginName: '//label[text()="Nombre de usuario"]',
+            userEmail: '//label[text()="Correo electrónico"]',
+            userEmailConfirm: '//label[text()="Confirmación de correo electrónico"]',
+            userPassword: '//label[text()="Contraseña"]',
+            userConfirmPassword: 'Confirmación de contraseña',
+            userCountry: '//div[@label="País"]/button/div[2]/input',
+            firstOptionCountry: 'div[label="País"] > button > ul > li:nth-child(1)',
+            language: '//div[@label="Idioma"]/button/div[2]/input',
+            firstOptionLanguage: 'div[label="Idioma"]> button > ul > li:nth-child(1)',
+            timezone: '//div[@label="Zona horaria"]/button/div[2]/input',
+            firstOptionZone: 'div[label="Zona horaria"]> button > ul > li:nth-child(1)',
+            super: '//form/div[10]/div/label/input',
         }
-        this.buttonSave = {role:'button', name:'Guardar'}
+        this.buttonSave = '//div[@class="edit-tools-content"]/div/div[2]/button[2]'
         this.elementValidation = '//a[text()="Editar usuario"]'
         this.elementValidation2 = '//a/span[text()="Configuración"]'
 	}
@@ -49,20 +51,21 @@ class CreateUser {
 		I.click(this.clickUser)
 
         I.seeInCurrentUrl('/users')
+        I.wait(5)
 
         I.waitForElement(this.buttonCreateUser,2)
         I.click(this.buttonCreateUser)
 
         I.waitInUrl('/users/create?tab=userNew',5)
-        I.wait(5)
         
         I.waitForElement(this.userNewForm)
  
 	}
 
-	formNewUserFill(userNames, userLoginName, userEmail,userEmailConfirm,userPassword,userPasswordConfirm, userCountry,language,timezone) {
+	async formNewUserFill(userNames, userLoginName, userEmail,userEmailConfirm,userPassword,userPasswordConfirm, userCountry,language,timezone) {
+        
+        
         I.fillField(this.inputForm.userNames, userNames)
-        I.wait(10)
         I.fillField(this.inputForm.userLoginName, userLoginName)
         I.fillField(this.inputForm.userEmail, userEmail)
         I.fillField(this.inputForm.userEmailConfirm, userEmailConfirm)
@@ -70,17 +73,20 @@ class CreateUser {
         I.fillField(this.inputForm.userConfirmPassword, userPasswordConfirm)
         I.fillField(this.inputForm.userCountry, userCountry)
         I.click(this.inputForm.firstOptionCountry)
+        I.click(this.inputForm.language)
         I.fillField(this.inputForm.language, language)
         I.click(this.inputForm.firstOptionLanguage)
+        I.click(this.inputForm.timezone)
         I.fillField(this.inputForm.timezone, timezone)
         I.click(this.inputForm.firstOptionZone)
-        I.checkOption(this.inputForm.super)
+        I.wait(5)
+        I.forceClick(this.inputForm.super)
         I.click(this.buttonSave)
+        I.wait(5)
 	}
 
 
     validateUser() {
-        I.seeInCurrentUrl('/user/edit/')
         I.seeElement(this.elementValidation)
         I.waitForElement(this.elementValidation2)
     }

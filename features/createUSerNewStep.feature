@@ -13,6 +13,6 @@ Feature: Crear un nuevo usuario
 
         Examples:
             | UserNameAdmin |UserPasswordAdmin     | Tenant   | UserNames    | UserLoginName | UserEmail              | UserEmailConfirm      | UserPassword | UserConfirmPassword | UserCountry | Language | Timezone |
-            | admin         | 2600Admin$uper99     | SUPER99  | Prueba Test  | TestUser1     | test1Auto@example.com  | test1Auto@example.com | Test1?1234   | Test1?1234          | Panama      | Español  | Panama   |
+            | admin         | 2600Admin$uper99     | SUPER99  | Prueba Test  | testUser1     | test1Auto@example.com  | test1Auto@example.com | Test1?1234   | Test1?1234          | Panamá      | Español  | Panama   |
 
 

@@ -1,0 +1,107 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1726245941560' stop='1726245951137'>
+    <name>Logging in</name>
+    <title>Logging in</title>
+    <test-cases>
+        <test-case start='1726245941561' status='passed' stop='1726245951064'>
+            <name>Scenario Outline for login {"Email":"admin","Password":"2600Admin$uper99","Tenant":"SUPER99"} @probando</name>
+            <title>Scenario Outline for login {"Email":"admin","Password":"2600Admin$uper99","Tenant":"SUPER99"} @probando</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='codeceptjs'/>
+                <label name='tag' value='@probando'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1726245941845' status='passed' stop='1726245944664'>
+                    <name>Given Im on the right page ""</name>
+                    <title>Given Im on the right page ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1726245941845' status='passed' stop='1726245943787'>
+                            <name>I am on page "/login"</name>
+                            <title>I am on page "/login"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726245943787' status='passed' stop='1726245944659'>
+                            <name>I wait for element "span.text-3xl.font-bold", 4</name>
+                            <title>I wait for element "span.text-3xl.font-bold", 4</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726245944660' status='passed' stop='1726245944663'>
+                            <name>I see in current url "/login"</name>
+                            <title>I see in current url "/login"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1726245944664' status='passed' stop='1726245951053'>
+                    <name>When I fill the form with my admin and my 2600Admin$uper99 and SUPER99 optional ""</name>
+                    <title>When I fill the form with my admin and my 2600Admin$uper99 and SUPER99 optional ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1726245944664' status='passed' stop='1726245944671'>
+                            <name>I wait for element "input#email", 5</name>
+                            <title>I wait for element "input#email", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726245944671' status='passed' stop='1726245945002'>
+                            <name>I fill field "input#email", "admin"</name>
+                            <title>I fill field "input#email", "admin"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726245945002' status='passed' stop='1726245945012'>
+                            <name>I wait for element "input#password", 5</name>
+                            <title>I wait for element "input#password", 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726245945012' status='passed' stop='1726245945533'>
+                            <name>I fill field "input#password", "2600Admin$uper99"</name>
+                            <title>I fill field "input#password", "2600Admin$uper99"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726245945533' status='passed' stop='1726245945851'>
+                            <name>I fill field "//input[@placeholder="Tenant"]", "SUPER99"</name>
+                            <title>I fill field "//input[@placeholder="Tenant"]", "SUPER99"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726245945851' status='passed' stop='1726245946047'>
+                            <name>I click "button[type="button"]"</name>
+                            <title>I click "button[type="button"]"</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                        <step start='1726245946047' status='passed' stop='1726245951053'>
+                            <name>I wait 5</name>
+                            <title>I wait 5</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+                <step start='1726245951053' status='passed' stop='1726245951064'>
+                    <name>Then I should see the dashboard page ""</name>
+                    <title>Then I should see the dashboard page ""</title>
+                    <attachments/>
+                    <steps>
+                        <step start='1726245951053' status='passed' stop='1726245951063'>
+                            <name>I wait for element "//div[text()="Bienvenido Admin Super99"]", 3</name>
+                            <title>I wait for element "//div[text()="Bienvenido Admin Super99"]", 3</title>
+                            <attachments/>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
