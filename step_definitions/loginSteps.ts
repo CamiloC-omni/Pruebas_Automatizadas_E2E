@@ -8,7 +8,7 @@ Given('Im on the right page', () => {
 })
 
 
-When(/^I fill the form with my (.*) and my (.*) and (.*) optional$/, (email, password, tenant) => {
+When(/^I fill the form with my (.*) and my (.*) and (.*) optional$/, (email:string, password:string, tenant:string) => {
 	loginPage.login(email, password, tenant)
 })
 

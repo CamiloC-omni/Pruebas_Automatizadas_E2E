@@ -32,7 +32,7 @@ class LoginPage {
 		}
 	}
 
-	async login(email, password, tenant) {
+	async login( email: string, password: string, tenant: string) {
 		I.waitForElement(this.loginInputName, 5);
 		I.fillField(this.loginInputName, email);
 	  
